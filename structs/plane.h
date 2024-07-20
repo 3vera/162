@@ -18,7 +18,7 @@ struct Plane {
 	int emptyWeight; // in pounds
 	int engineHP; // horsepower
 	int maxRange; // nautical miles
-	int curiseSpeed; // knots
+	int cruiseSpeed; // knots
 };
 
 void listPlanes(Plane planes[], int size);
