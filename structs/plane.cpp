@@ -4,10 +4,8 @@ int loadPlanes(ifstream& inFile, Plane planes[]) {
 	int size = 0;
 
 	while(!inFile.eof()) {
-		inFile.get(planes[size].model, MAXCHAR, ';');
-		inFile.ignore(100, ';');
-		inFile.get(planes[size].make, MAXCHAR, ';');
-		inFile.ignore(100, ';');
+		inFile.getline(planes[size].model, MAXCHAR, ';');
+		inFile.getline(planes[size].make, MAXCHAR, ';');
 		inFile >> planes[size].maxFuel;
 		inFile.ignore(100, ';');
 		inFile >> planes[size].emptyWeight;
