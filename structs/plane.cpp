@@ -31,11 +31,11 @@ void listPlanes(Plane planes[], int size) {
 	cout << right << setw(16) << "Empty Weight";
 	cout << right << setw(16) << "Horsepower";
 	cout << right << setw(16) << "Range";
-	cout << right << setw(16) << "Cruise Speed\n";
-	//setfill here
+	cout << right << setw(16) << "Cruise Speed\n\n";
+	cout << setfill ('-') << setw(115) << "-\n"; 
 	
 	for (int i = 0; i < size; i++) {
-		cout << (i+1) << ".";
+		cout << setfill (' ') << (i+1) << ".";
 		cout << left << setw(18) << planes[i].model;	
 		cout << left << setw(15) << planes[i].make;	
 		cout << right << setw(15) << planes[i].maxFuel;	
