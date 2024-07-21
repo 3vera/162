@@ -43,3 +43,24 @@ void listPlanes(Plane planes[], int size) {
 		cout << right << setw(15) << planes[i].cruiseSpeed << endl;	
 	} 
 }
+
+void addAPlane(Plane planes[], int& size) {
+	Plane tempPlane;
+	cout << "What is the model (name) of the airplane? ";
+	cin.getline(tempPlane.model, MAXCHAR); 
+	cout << "What is the make (manufacturer) of the airplane? ";	
+	cin.getline(tempPlane.make, MAXCHAR);
+	cout << "\nWhat is the fuel capacity in gallons? ";
+	cin >> tempPlane.maxFuel;
+	cout << "\nWhat is the empty weight in lbs? ";
+	cin >> tempPlane.emptyWeight;
+	cout << "\nWhat is the horsepower of the engine? ";
+	cin >> tempPlane.engineHP;
+	cout << "\nWhat is the range? ";
+	cin >> tempPlane.maxRange;
+	cout << "\nWhat is the cruise speed? ";
+	cin >> tempPlane.cruiseSpeed;
+	planes[size] = tempPlane;
+	cout << "Successfully added " << planes[size].model << " to the database.\n";
+	size++; 
+}

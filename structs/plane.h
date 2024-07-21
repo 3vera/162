@@ -23,4 +23,5 @@ struct Plane {
 
 void listPlanes(Plane planes[], int size);
 int loadPlanes(ifstream& inFile, Plane planes[]);
+void addAPlane(Plane planes[], int& size);
 #endif /* plane_h */

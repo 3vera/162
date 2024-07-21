@@ -24,6 +24,8 @@ void menu() {
 void getOption(char& choice) {
 	cin >> choice;
 	if (tolower(choice) == 'q') {
-	exit (0);	
+		exit(0);
+	} else {
+		return;
 	}
 }

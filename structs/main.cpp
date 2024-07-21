@@ -17,8 +17,15 @@ int main() {
 	count = loadPlanes(inFile, planes);
 	cout << "Successfully loaded " << count << " airplanes.\n";
 	listPlanes(planes, count);
+
 	menu();
-	getOption(option);	
+	getOption(option);
+	if(tolower(option) == 'a') {
+		addAPlane(planes, count);
+	} else if(tolower(option) == 'l') {
+		listPlanes(planes, count);
+	}
+	listPlanes(planes, count);		
 	return 0;
 }
 
