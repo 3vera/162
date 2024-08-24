@@ -20,12 +20,12 @@ int main() {
 
 	menu();
 	getOption(option);
-	if(tolower(option) == 'a') {
-		addAPlane(planes, count);
-	} else if(tolower(option) == 'l') {
-		listPlanes(planes, count);
-	}
-	listPlanes(planes, count);		
+		if(tolower(option) == 'a') {
+			addAPlane(planes, count);
+		} else if(tolower(option) == 'l') {
+			listPlanes(planes, count);
+		}
+	listPlanes(planes, count);
 	return 0;
 }
 
