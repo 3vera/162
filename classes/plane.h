@@ -1,8 +1,17 @@
-#ifndef STOREITEM_H
-#define STOREITEM_H
+#ifndef PLANE_H
+#define PLANE_H
+#pragma once 
+
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std;
+
+const int STR_SIZE = 256;
 
 class Plane {
-pivate: //private properties 
+private: //private properties 
 	char make[STR_SIZE];
 	char model[STR_SIZE];
 	double maxFuel; // in gallons 
@@ -20,13 +29,12 @@ public:
 	int getMaxRange();	
 	int getCruiseSpeed();
 	// "setters" 
-	void setMake(cosnt char *);
+	void setMake(const char *);
 	void getModel(const char *);
 	void setMaxFuel(double);
 	void setEmptyWeight(int);
 	void setMaxRange(int);
 	void setCruiseSpeed(int);
 };
-
 
 #endif
