@@ -37,4 +37,4 @@ public:
 	void setCruiseSpeed(int);
 };
 
-#endif
+#endif /*plane.h*/

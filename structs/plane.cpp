@@ -2,8 +2,8 @@
 
 int loadPlanes(ifstream& inFile, Plane planes[]) {
 	int size = 0;
-	inFile.getline(planes[size].model, MAXCHAR, ';');
 	while(!inFile.eof()) {
+		inFile.getline(planes[size].model, MAXCHAR, ';');
 		inFile.getline(planes[size].make, MAXCHAR, ';');
 		inFile >> planes[size].maxFuel;
 		inFile.ignore(100, ';');
@@ -15,7 +15,6 @@ int loadPlanes(ifstream& inFile, Plane planes[]) {
 		inFile.ignore(100, ';');
 		inFile >> planes[size].cruiseSpeed;
 		size++;	
-		inFile.getline(planes[size].model, MAXCHAR, ';');
 		
 	}
 	inFile.close();
@@ -31,7 +30,6 @@ void listPlanes(Plane planes[], int size) {
 	cout << right << setw(16) << "Range";
 	cout << right << setw(16) << "Cruise Speed\n\n";
 	cout << setfill ('-') << setw(115) << "-" << setfill (' ') << endl; 
-	
 	for (int i = 0; i < size; i++) {
 		cout << (i+1) << ".";
 		cout << left << setw(18) << planes[i].model;	
@@ -40,7 +38,7 @@ void listPlanes(Plane planes[], int size) {
 		cout << right << setw(15) << planes[i].emptyWeight;	
 		cout << right << setw(15) << planes[i].engineHP;	
 		cout << right << setw(15) << planes[i].maxRange;	
-		cout << right << setw(15) << planes[i].cruiseSpeed << '\n'; 	
+		cout << right << setw(15) << planes[i].cruiseSpeed << endl; 	
 	} 
 }
 
